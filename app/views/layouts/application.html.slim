@@ -9,4 +9,5 @@ html lang="fr"
     = csrf_meta_tag
     = javascript_include_tag 'application', async: Rails.env.production?
   body
-    = yield
+    .main-container
+      = yield

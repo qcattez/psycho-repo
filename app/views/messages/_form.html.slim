@@ -1,9 +1,4 @@
-= form_for @message do |f|
-  - if @message.errors.any?
-    #error_explanation
-      h2 = "#{pluralize(@message.errors.count, "error")} prohibited this message from being saved:"
-      ul
-        - @message.errors.full_messages.each do |message|
-          li = message
-
-  .actions = f.submit
+= simple_form_for @message, html: { class: 'form-horizontal' } do |f|
+  = f.input :text
+  = f.input :title
+  = f.button :submit
